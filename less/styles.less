@@ -1,0 +1,1068 @@
+@import "bootstrap/bootstrap.less";
+@import "golden-bootstrap.less";
+@import "colors.less";
+@import "bootstrap-multiselect.less";
+
+
+// Variables
+// --------------------------------------------------
+
+
+@media (min-width: 1200px){
+ .container {
+width: 1100px;
+}
+
+ .light-theme .container {
+width: 980px;
+}
+
+
+}
+
+// Scaffolding
+// -------------------------
+
+@body-bg:               @gray;
+@text-color:            @gray-lighter;
+
+// Links
+// -------------------------
+
+/*@link-color:            lighten(@brand-primary, 20%);
+@link-hover-color:      lighten(@link-color, 15%);*/
+
+@link-color:            @gray-lighter;
+@link-hover-color:      lighten(@link-color, 15%);
+
+
+// Typography
+// -------------------------
+
+@font-family-sans-serif:  'Open Sans' , sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          17px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-smaller:         ceil((@font-size-base * 0.62)); 
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+@headings-font-family:    inherit;
+@headings-font-weight:    500;
+@headings-line-height:    1.1;
+@headings-color:          @gray-lighter;
+
+.nav-tabs > li.active > a h1,nav-tabs > li.active > a h2,nav-tabs > li.active > a h3,nav-tabs > li.active > a h4
+{
+    color:@brand-info-darker;
+}
+
+// Iconography
+// -------------------------
+
+@icon-font-path:          "../fonts/";
+@icon-font-name:          "glyphicons-halflings-regular";
+
+
+// Components
+// -------------------------
+// Based on 14px font-size and 1.428 line-height (~20px to start)
+
+@padding-base-vertical:          6px;
+@padding-base-horizontal:        12px;
+
+@padding-large-vertical:         10px;
+@padding-large-horizontal:       16px;
+
+@padding-small-vertical:         5px;
+@padding-small-horizontal:       10px;
+
+@padding-xs-vertical:            1px;
+@padding-xs-horizontal:          5px;
+
+@line-height-large:              1.33;
+@line-height-small:              1.5;
+
+@border-radius-base:             0px;
+@border-radius-large:            0px;
+@border-radius-small:            0px;
+
+
+@component-active-color:         @brand-info-lighter;
+@component-active-bg:            @brand-info;
+
+@caret-width-base:               4px;
+@caret-width-large:              5px;
+
+// Tables
+// -------------------------
+
+@table-cell-padding:                 8px;
+@table-condensed-cell-padding:       5px;
+
+@table-bg:                           transparent; // overall background-color
+@table-bg-accent:                    #f9f9f9; // for striping
+@table-bg-hover:                     #f5f5f5;
+@table-bg-active:                    @table-bg-hover;
+
+@table-border-color:                 #ddd; // table and cell border
+
+
+// Buttons
+// -------------------------
+
+@btn-font-weight:                normal;
+
+/*@btn-default-color:              @gray-darker;
+@btn-default-bg:                 #dcdcdc;
+@btn-default-border:             @gray-lighter;*/
+@btn-default-color:               @gray-lighter;
+@btn-default-bg:                 @brand-primary;
+@btn-default-border:             @gray-lighter;
+
+
+@btn-options-color:              @gray-darker;
+@btn-options-bg:                @gray-lighter;
+@btn-options-border:             @gray-lighter;
+
+
+
+/*@btn-primary-color:              @gray-lighter;
+@btn-primary-bg:                 @brand-primary;
+@btn-primary-border:             @gray-lighter;*/
+@btn-primary-color:              @gray-darker;
+@btn-primary-bg:                 #dcdcdc;
+@btn-primary-border:             @gray-lighter;
+
+@btn-success-color:              #fff;
+@btn-success-bg:                 @brand-success;
+@btn-success-border:             darken(@btn-success-bg, 5%);
+
+@btn-warning-color:              #fff;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             darken(@btn-warning-bg, 5%);
+
+@btn-danger-color:               #fff;
+@btn-danger-bg:                  @brand-danger;
+@btn-danger-border:              darken(@btn-danger-bg, 5%);
+
+@btn-info-color:                 #fff;
+@btn-info-bg:                    @brand-info;
+@btn-info-border:                darken(@btn-info-bg, 5%);
+
+@btn-link-disabled-color:        @gray-light;
+
+
+// Forms
+// -------------------------
+
+@input-bg:                       @gray-lighter;
+@input-bg-disabled:              @gray-darker;
+
+@input-color:                    black;
+@input-border:                   @gray-darker;
+@input-border-radius:            @border-radius-base;
+@input-border-focus:             @gray-lighter;
+
+@input-color-placeholder:        @gray-light;
+
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+@legend-color:                   @gray-light;
+@legend-border-color:            @gray-dark;
+
+@input-group-addon-bg:           @gray-lighter;
+@input-group-addon-border-color: @input-border;
+
+
+// Dropdowns
+// -------------------------
+
+@dropdown-bg:                    @gray;
+@dropdown-border:                rgba(0,0,0,.15);
+@dropdown-fallback-border:       #ccc;
+@dropdown-divider-bg:            @gray-light;
+
+@dropdown-link-color:            @gray-lighter;
+@dropdown-link-hover-color:      lighten(@gray-lighter, 5%);
+@dropdown-link-hover-bg:         @gray-darker;
+
+@dropdown-link-active-color:     @component-active-color;
+@dropdown-link-active-bg:        @component-active-bg;
+
+@dropdown-link-disabled-color:   @gray-light;
+
+@dropdown-header-color:          @gray-light;
+
+// Note: Deprecated @dropdown-caret-color as of v3.1
+@dropdown-caret-color:           #000;
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+
+@zindex-navbar:            1000;
+@zindex-dropdown:          1000;
+@zindex-popover:           1010;
+@zindex-tooltip:           1030;
+@zindex-navbar-fixed:      1030;
+@zindex-modal-background:  1040;
+@zindex-modal:             1050;
+
+// Media queries breakpoints
+// --------------------------------------------------
+
+// Extra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+
+// Grid system
+// --------------------------------------------------
+
+// Number of columns in the grid system
+@grid-columns:              12;
+// Padding, to be divided by two and applied to the left and right of all columns
+@grid-gutter-width:         30px;
+
+// Navbar collapse
+
+// Point at which the navbar becomes uncollapsed
+@grid-float-breakpoint:     @screen-sm-min;
+// Point at which the navbar begins collapsing
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+
+// Navbar
+// -------------------------
+
+// Basics of a navbar
+@navbar-height:                    70px;
+@navbar-margin-bottom:             @line-height-computed;
+@navbar-border-radius:             @border-radius-base;
+@navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
+@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+
+@navbar-default-color:             #777;
+@navbar-default-bg:                #ffffff;
+/*@navbar-default-border:            darken(@navbar-default-bg, 6.5%);*/
+@navbar-default-border:            @brand-primary-dark;
+
+// Navbar links
+@navbar-default-link-color:                #777;
+@navbar-default-link-hover-color:          #333;
+@navbar-default-link-hover-bg:             transparent;
+/*@navbar-default-link-active-color:         #555;
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);*/
+@navbar-default-link-active-color:         @gray;
+@navbar-default-link-active-bg:            @gray-lighter;
+
+.navbar-default .navbar-nav > li > a
+{
+    font-weight:700;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: @brand-info;
+border-bottom: 2px solid  @brand-info;
+
+}
+
+
+
+
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg:            transparent;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           #ddd;
+@navbar-default-toggle-icon-bar-bg:        #888;
+@navbar-default-toggle-border-color:       #ddd;
+
+
+// Inverted navbar
+//
+// Reset inverted navbar basics
+@navbar-inverse-color:                      @gray-light;
+@navbar-inverse-bg:                         @gray;
+@navbar-inverse-border:                      @gray;
+
+// Inverted navbar links
+@navbar-inverse-link-color:                 @gray-light;
+@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-hover-bg:              transparent;
+@navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-disabled-color:        #444;
+@navbar-inverse-link-disabled-bg:           transparent;
+
+// Inverted navbar brand label
+@navbar-inverse-brand-color:                @navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color:          #fff;
+@navbar-inverse-brand-hover-bg:             transparent;
+
+// Inverted navbar toggle
+@navbar-inverse-toggle-hover-bg:            #333;
+@navbar-inverse-toggle-icon-bar-bg:         #fff;
+@navbar-inverse-toggle-border-color:        #333;
+
+
+
+// Navs
+// -------------------------
+
+@nav-link-padding:                          10px 15px;
+@nav-link-hover-bg:                         @gray-dark;
+
+@nav-disabled-link-color:                   @gray-lighter;
+@nav-disabled-link-hover-color:             @gray-light;
+
+@nav-open-link-hover-color:                 #fff;
+
+// Tabs
+@nav-tabs-border-color:                     @gray;
+
+@nav-tabs-link-hover-border-color:          @gray;
+
+@nav-tabs-active-link-hover-bg:             @gray-lighter;
+@nav-tabs-active-link-hover-color:          @gray;
+@nav-tabs-active-link-hover-border-color:   @gray;
+
+@nav-tabs-justified-link-border-color:            #ddd;
+@nav-tabs-justified-active-link-border-color:     @body-bg;
+
+// Pills
+@nav-pills-border-radius:                   @border-radius-base;
+@nav-pills-active-link-hover-bg:            @gray-darker;
+@nav-pills-active-link-hover-color:         @gray-lighter;
+
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus
+{
+    background-color:@gray;
+    color: @gray-lighter;
+
+
+    
+}
+
+
+
+
+// Pagination
+// -------------------------
+
+@pagination-color:                     @link-color;
+@pagination-bg:                        @gray;
+@pagination-border:                    #ddd;
+
+@pagination-hover-color:               @link-hover-color;
+@pagination-hover-bg:                  @gray-lighter;
+@pagination-hover-border:              #ddd;
+
+@pagination-active-color:              @gray-lighter;
+@pagination-active-bg:                 @gray-lighter;
+@pagination-active-border:            @gray-lighter;
+
+@pagination-disabled-color:           @gray-lighter;
+@pagination-disabled-bg:               @gray-lighter;
+@pagination-disabled-border:          @gray-lighter;
+
+
+// Pager
+// -------------------------
+
+@pager-bg:                             @pagination-bg;
+@pager-border:                         @pagination-border;
+@pager-border-radius:                  15px;
+
+@pager-hover-bg:                       @pagination-hover-bg;
+
+@pager-active-bg:                      @pagination-active-bg;
+@pager-active-color:                   @pagination-active-color;
+
+@pager-disabled-color:                 @pagination-disabled-color;
+
+
+// Jumbotron
+// -------------------------
+
+@jumbotron-padding:              10px;
+@jumbotron-color:                inherit;
+@jumbotron-bg:                   @gray-darker;
+@jumbotron-heading-color:        inherit;
+@jumbotron-font-size:            ceil((@font-size-base * 1.0));
+
+
+// Form states and alerts
+// -------------------------
+
+@state-success-text:             #3c763d;
+@state-success-bg:               #dff0d8;
+@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text:                @brand-info-lighter;
+@state-info-bg:                  @brand-info;
+@state-info-border:              @brand-info;
+
+@state-warning-text:             @brand-warning-darker;
+@state-warning-bg:               @brand-warning-lighter;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+
+@state-danger-text:              #a94442;
+@state-danger-bg:                #f2dede;
+@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
+
+
+// Tooltips
+// -------------------------
+@tooltip-max-width:           200px;
+@tooltip-color:               #fff;
+@tooltip-bg:                  #000;
+@tooltip-opacity:             .9;
+
+@tooltip-arrow-width:         5px;
+@tooltip-arrow-color:         @tooltip-bg;
+
+
+// Popovers
+// -------------------------
+@popover-bg:                          #fff;
+@popover-max-width:                   1024px;
+@popover-border-color:                rgba(0,0,0,.2);
+@popover-fallback-border-color:       #ccc;
+
+@popover-title-bg:                    darken(@popover-bg, 3%);
+
+@popover-arrow-width:                 10px;
+@popover-arrow-color:                 #fff;
+
+@popover-arrow-outer-width:           (@popover-arrow-width + 1);
+@popover-arrow-outer-color:           rgba(0,0,0,.25);
+@popover-arrow-outer-fallback-color:  #999;
+
+
+// Labels
+// -------------------------
+
+@label-default-bg:            @gray-light;
+@label-primary-bg:            @brand-primary;
+@label-success-bg:            @brand-success;
+@label-info-bg:               @brand-info;
+@label-warning-bg:            @brand-warning-darker;
+@label-danger-bg:             @brand-danger;
+
+@label-color:                 #fff;
+@label-link-hover-color:      #fff;
+
+
+// Modals
+// -------------------------
+@modal-inner-padding:         20px;
+
+@modal-title-padding:         15px;
+@modal-title-line-height:     @line-height-base;
+
+@modal-content-bg:                             @gray;
+@modal-content-border-color:                   @gray-dark;
+@modal-content-fallback-border-color:          @gray-darker;
+
+@modal-backdrop-bg:           #000;
+@modal-backdrop-opacity:      .62;
+@modal-header-border-color:   @gray-darker;
+@modal-footer-border-color:   @modal-header-border-color;
+
+@modal-lg:                    900px;
+@modal-sm:                    300px;
+
+
+// Alerts
+// -------------------------
+@alert-padding:               15px;
+@alert-border-radius:         @border-radius-base;
+@alert-link-font-weight:      bold;
+
+@alert-success-bg:            @state-success-bg;
+@alert-success-text:          @state-success-text;
+@alert-success-border:        @state-success-border;
+
+@alert-info-bg:               @state-info-bg;
+@alert-info-text:             @state-info-text;
+@alert-info-border:           @state-info-border;
+
+@alert-warning-bg:            @state-warning-bg;
+@alert-warning-text:          @state-warning-text;
+@alert-warning-border:        @state-warning-border;
+
+@alert-danger-bg:             @state-danger-bg;
+@alert-danger-text:           @state-danger-text;
+@alert-danger-border:         @state-danger-border;
+
+
+// Progress bars
+// -------------------------
+@progress-bg:                 #f5f5f5;
+@progress-bar-color:          #fff;
+
+@progress-bar-bg:             @brand-primary;
+@progress-bar-success-bg:     @brand-success;
+@progress-bar-warning-bg:     @brand-warning;
+@progress-bar-danger-bg:      @brand-danger;
+@progress-bar-info-bg:        @brand-info;
+
+
+// List group
+// -------------------------
+@list-group-bg:                 transparent;
+@list-group-border:             @gray-darker;
+@list-group-border-radius:      @border-radius-base;
+
+@list-group-hover-bg:           @gray-dark;
+@list-group-active-color:       @component-active-color;
+@list-group-active-bg:          @component-active-bg;
+@list-group-active-border:      @list-group-active-bg;
+@list-group-active-text-color:  lighten(@list-group-active-bg, 40%);
+
+@list-group-link-color:         @gray-lighter;
+@list-group-link-heading-color: @gray-light;
+
+
+
+
+
+// Panels
+// -------------------------
+@panel-bg:                    #fff;
+@panel-body-padding:          15px;
+@panel-border-radius:         @border-radius-base;
+
+@panel-inner-border:          #ddd;
+@panel-footer-bg:             #f5f5f5;
+
+@panel-default-text:          @gray-lighter;
+@panel-default-border:        @gray-dark;
+@panel-default-heading-bg:    @gray-dark;
+
+@panel-primary-text:          #fff;
+@panel-primary-border:        @brand-primary;
+@panel-primary-heading-bg:    @brand-primary;
+
+@panel-success-text:          @state-success-text;
+@panel-success-border:        @state-success-border;
+@panel-success-heading-bg:    @state-success-bg;
+
+@panel-warning-text:          @state-warning-text;
+@panel-warning-border:        @state-warning-border;
+@panel-warning-heading-bg:    @state-warning-bg;
+
+@panel-danger-text:           @state-danger-text;
+@panel-danger-border:         @state-danger-border;
+@panel-danger-heading-bg:     @state-danger-bg;
+
+@panel-info-text:             @state-info-text;
+@panel-info-border:           @state-info-border;
+@panel-info-heading-bg:       @state-info-bg;
+
+
+// Thumbnails
+// -------------------------
+@thumbnail-padding:           4px;
+@thumbnail-bg:                 @gray;
+@thumbnail-border:            @gray-lighter;
+@thumbnail-border-radius:     @border-radius-base;
+
+@thumbnail-caption-color:     @text-color;
+@thumbnail-caption-padding:   9px;
+.thumbnail 
+{
+    margin-bottom:0;
+}
+
+
+// Wells
+// -------------------------
+/*@well-bg:                     #f5f5f5;*/
+@well-bg:                     @gray;
+@well-border:                 @gray;
+
+
+
+
+// Badges
+// -------------------------
+@badge-color:                 #fff;
+@badge-link-hover-color:      #fff;
+@badge-bg:                    @gray-light;
+
+@badge-active-color:          @link-color;
+@badge-active-bg:             #fff;
+
+@badge-font-weight:           500;
+@badge-line-height:           1;
+@badge-border-radius:         10px;
+
+
+// Breadcrumbs
+// -------------------------
+@breadcrumb-padding-vertical:   8px;
+@breadcrumb-padding-horizontal: 15px;
+@breadcrumb-bg:                 #f5f5f5;
+@breadcrumb-color:              #ccc;
+@breadcrumb-active-color:       @gray-light;
+@breadcrumb-separator:          "/";
+
+
+// Carousel
+// ------------------------
+
+@carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
+
+@carousel-control-color:                      #fff;
+@carousel-control-width:                      15%;
+@carousel-control-opacity:                    .5;
+@carousel-control-font-size:                  20px;
+
+@carousel-indicator-active-bg:                #fff;
+@carousel-indicator-border-color:             #fff;
+
+@carousel-caption-color:                      #fff;
+
+
+
+
+
+
+// Close
+// ------------------------
+@close-font-weight:           bold;
+@close-color:                 #000;
+@close-text-shadow:           0 1px 0 #fff;
+
+
+// Code
+// ------------------------
+@code-color:                  #c7254e;
+@code-bg:                     #f9f2f4;
+
+@kbd-color:                   #fff;
+@kbd-bg:                      #333;
+
+@pre-bg:                      #f5f5f5;
+@pre-color:                   @gray-dark;
+@pre-border-color:            #ccc;
+@pre-scrollable-max-height:   340px;
+
+// Type
+// ------------------------
+@text-muted:                  rgba(255,255,255,.62);
+@abbr-border-color:           @gray-light;
+@headings-small-color:        @gray-light;
+@blockquote-small-color:      @gray-light;
+@blockquote-border-color:     @gray-lighter;
+@page-header-border-color:    @gray-lighter;
+
+
+
+
+// Miscellaneous
+// -------------------------
+
+// Hr border color
+@hr-border:                   @gray-light;
+
+// Horizontal forms & lists
+@component-offset-horizontal: 180px;
+
+
+
+// Container sizes
+// --------------------------------------------------
+
+// Small screen / tablet
+@container-tablet:             ((720px + @grid-gutter-width));
+@container-sm:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            ((940px + @grid-gutter-width));
+@container-md:                 @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:      ((1140px + @grid-gutter-width));
+@container-lg:                 @container-large-desktop;
+
+
+
+
+body {
+  padding-top: 72px;
+}
+
+
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.btn-radio {
+	/*width: 100%;*/
+}
+.img-radio {
+	opacity: 1;
+	/*margin: 20px 0;*/
+	width:100%;
+	height:150px;
+	
+	/*display:none;*/
+}
+
+.space-20 {
+    margin-top: 20px;
+}
+.footer 
+{
+    padding-top:30px;
+}
+.btn-radio
+{
+   /* white-space: normal!important;height:100px!important;*/
+}
+
+.state-icon {
+    left: -5px;
+}
+.list-group-item-primary {
+    color: @brand-info-lighter;
+    background-color: @brand-info;
+}
+
+/* DEMO ONLY - REMOVES UNWANTED MARGIN */
+.well .list-group {
+    margin-bottom: 0px;
+}
+
+.btn.active {
+background-color: @brand-info;
+color: @brand-info-lighter;
+}
+
+.btn-primary {
+text-transform:uppercase;
+font-weight:700;
+}
+
+.noborder
+{
+    border:none;
+}
+
+
+.nav-bordered
+{
+    border-bottom:1px solid @gray-dark;
+}
+
+
+.well
+{
+    /*border:solid 3px @brand-info;*/
+    background-color:@gray;
+    /*min-height:404px;*/
+    -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+display:block;
+   
+}
+.well.active
+{
+    /*border:solid 3px @brand-info;*/
+    background-color:@gray-light;
+   
+}
+
+li.active .btn-circle
+{
+  
+background-color:@gray-lighter;color: @brand-info;
+/*border: 3px solid @brand-info;
+width: 34px;
+height: 34px;border-radius: 18px;*/
+
+}
+
+
+
+
+/*
+
+
+.stepwizard-step p {
+    margin-top: 10px;    
+}
+
+.stepwizard-row {
+    display: table-row;
+}
+
+.stepwizard {
+    display: table;     
+    width: 100%;
+    position: relative;
+}
+
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+    
+}
+
+.stepwizard-step {    
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+
+*/
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-color:@gray-light;
+  border-radius: 15px;
+}
+
+.light-theme 
+{
+   color:@gray-darker;
+}
+
+
+.light-theme .well , .light-theme.well
+{
+   background-color: @gray-lighter;
+   border-color:@gray;
+}
+.light-theme .well.active , .light-theme.well.active
+{
+   border-color:@brand-info;
+}
+.light-theme p
+{
+    color:@gray-darker;
+}
+
+.light-theme input ,.light-theme .form-control
+{
+    color:black;
+    background-color:white;
+    border-color:@gray-light;
+}
+
+.light-theme .input-group-addon
+{
+    border-color:@gray-light;
+}
+
+
+.light-theme label
+{
+    color:@gray-darker;
+
+}
+
+
+.light-theme input:focus
+{
+    border-color:@gray-darker;
+}
+
+
+.light-theme .btn-default:hover, .light-theme .btn-default:focus, .light-theme .btn-default:active, .light-theme .btn-default.active, .light-theme .open .dropdown-toggle.btn-default
+{
+color:black;
+background-color:@gray-lighter;
+border-color:@gray-light;
+}
+
+
+.light-theme .dropdown-menu > li > a {
+color:black;
+background-color:@gray-lighter;
+border-color:@gray-light;
+}
+
+.light-theme .dropdown-menu > .active > a, .light-theme .dropdown-menu > .light-theme .active > a:hover, .light-theme .dropdown-menu > .active > a:focus {
+color:black;
+background-color:@gray-lighter;
+border-color:@gray-light;
+
+}
+
+
+.light-theme .dropdown-menu > li > a:hover, .light-theme .dropdown-menu > li > a:focus {
+text-decoration: none;
+color: black!important;
+background-color:@gray-lighter!important;
+}
+
+/* all */
+.light-theme ::-webkit-input-placeholder { color:@gray-light;font-weight:600; }
+.light-theme ::-moz-placeholder { color:@gray-light;font-weight:600; } /* firefox 19+ */
+.light-theme :-ms-input-placeholder { color:@gray-light;font-weight:600; } /* ie */
+.light-theme input:-moz-placeholder { color:@gray-light;font-weight:600; }
+
+
+
+.light-theme h1 , .light-theme h2 ,.light-theme h3 ,.light-theme h4
+{
+    color:@brand-info;
+}
+.light-theme .btn-default {
+color: @gray-darker;
+background-color: @gray-lighter;
+border-color: @gray;
+}
+
+.light-theme .btn-default.active {
+color: @brand-info-lighter;
+background-color: @brand-info;
+border-color: @brand-info-dark;
+}
+
+
+.light-theme .list-group-item {
+background-color: @gray-lighter;
+border: 1px solid @gray-light;
+color: @gray-darker;
+}
+
+.light-theme a {
+color: @gray;
+}
+.light-theme .btn-link {
+color: @gray;
+}
+
+
+.light-theme a:hover {
+color: @gray-light;
+}
+.light-theme .nav > li > a , .light-theme .nav > li > a h4{
+color:@gray-darker;
+}
+.light-theme .nav > li.active > a, .light-theme .nav > li > a:hover, .light-theme .nav > li > a:focus {
+text-decoration: none;
+background-color: @gray-lighter;
+color:@brand-info;
+border-bottom:3px solid @brand-info;
+
+}
+
+.light-theme  .nav.nav-justified > li.active > a
+{
+    border-bottom:0px solid @brand-info;
+}
+
+.light-theme .nav > li.active > a h4, .light-theme .nav > li > a:hover h4, .light-theme .nav > li > a:focus h4 {
+color:@brand-info;
+}
+
+body.light-theme  {
+background-color: @gray-lighter;
+}
+.light-theme .navbar-default {
+border-color: @gray-light;
+}
+.light-theme .page-header {
+border-color: white;
+}
+.light-theme .panel-default {
+border-color: white;
+}
+.light-theme .panel-default > .panel-heading {
+color: white;
+background-color: @gray-light;
+border-color: white;
+}
+
+.well h2
+{
+    /*font-size:1.62em;
+    line-height:36px;*/
+    display:none;
+}
+
+.jumbotron h1, .jumbotron .h1
+{
+    font-weight:300;
+}
+
+.form-signin {
+max-width: 330px;
+padding: 15px;
+margin: 0 auto;
+}

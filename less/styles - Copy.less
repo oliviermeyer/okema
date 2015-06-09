@@ -1,0 +1,1708 @@
+@import "bootstrap/bootstrap.less";
+
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-weight: normal;
+
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;/*400*/
+
+}
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+    font-weight: bold;/*600*/
+
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+
+}
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+
+}
+
+
+#menu 
+{
+    display:none;
+}
+
+// Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+// Grays
+// -------------------------
+
+/*@gray-darker:            lighten(#000, 13.5%); // #222
+@gray-dark:              lighten(#000, 20%);   // #333
+@gray:                   lighten(#000, 33.5%); // #555
+@gray-light:             lighten(#000, 60%);   // #999
+@gray-lighter:           lighten(#000, 93.5%); // #eee*/
+
+
+@gray-darker:            lighten(#000, 11%); // #222
+@gray-dark:              lighten(#000, 20%);   // #333
+@gray:                   lighten(#000, 33.5%); // #555
+@gray-light:             lighten(#000, 62%);   // #999
+@gray-lighter:           lighten(#000, 93.5%); // #eee
+
+.brand-primary 
+{
+    color:@brand-primary!important;
+}
+.brand-primary-darker 
+{
+    color:@brand-primary-darker!important;
+}
+.brand-primary-dark 
+{
+    color:@brand-primary-dark!important;
+}
+.brand-primary-light 
+{
+    color:@brand-primary-light!important;
+}
+.brand-primary-lighter
+{
+    color:@brand-primary-lighter!important;
+}
+
+.gray-darker 
+{
+    color:@gray-darker!important;
+}
+.gray-dark 
+{
+    color:@gray-dark!important;
+}
+
+.gray 
+{
+    color:@gray!important;
+}
+
+.gray-light 
+{
+    color:@gray-light!important;
+}
+.gray-bg
+{
+    background-color:@gray!important;
+}
+.gray-lighter 
+{
+    color:@gray-lighter!important;
+}
+.brand-warning-darker 
+{
+    color:@brand-warning-darker!important;
+}
+.brand-warning-dark
+{
+    color:@brand-warning-dark!important;
+}
+.brand-warning
+{
+    color:@brand-warning!important;
+}
+.brand-warning-light 
+{
+    color:@brand-warning-light!important;
+}
+.brand-warning-lighter 
+{
+    color:@brand-warning-lighter!important;
+}
+
+
+
+
+
+.brand-info-darker 
+{
+    color:@brand-info-darker!important;
+}
+.brand-info-dark
+{
+    color:@brand-info-dark!important;
+}
+.brand-info
+{
+    color:@brand-info!important;
+}
+.brand-info-light 
+{
+    color:@brand-info-light!important;
+}
+.brand-info-lighter 
+{
+    color:@brand-info-lighter!important;
+}
+
+
+
+.brand-success-darker 
+{
+    color:@brand-success-darker!important;
+}
+.brand-success-dark
+{
+    color:@brand-success-dark!important;
+}
+.brand-success
+{
+    color:@brand-success!important;
+}
+.brand-success-light 
+{
+    color:@brand-success-light!important;
+}
+.brand-success-lighter 
+{
+    color:@brand-success-lighter!important;
+    
+    
+}
+
+
+
+
+
+// Brand colors
+// -------------------------
+
+//blue cegedim : #00B2FF
+//orange : #FFA14E;
+@brand-primary-darker:         #D07B2F;
+@brand-primary-dark:         #DD9758;
+@brand-primary:         #FFA14E;
+@brand-primary-light:         #FFC898;
+@brand-primary-lighter:         #FFE8D3;
+@brand-success-darker:         #1D767E;
+@brand-success-dark:         #378087;
+@brand-success:         #31929B;
+@brand-success-light:         #8FE6EF;
+@brand-success-lighter:         #C6EBEF;
+@brand-warning-darker:         #D0BD2F;
+@brand-warning-dark:         #DDCE58;
+@brand-warning:         #FFEA4E;
+@brand-warning-light:         #FFF398;
+@brand-warning-lighter:         #FFFAD3;
+@brand-info-darker:            #4C278E;
+@brand-info-dark:            #634597;
+@brand-info:            #6941AE;
+@brand-info-light:            #BA99F2;
+@brand-info-lighter:            #DACCF2;
+/*not used*/
+@brand-danger:          #d9534f;
+
+
+// Scaffolding
+// -------------------------
+
+@body-bg:               @gray-darker;
+@text-color:            @gray-lighter;
+
+// Links
+// -------------------------
+
+/*@link-color:            lighten(@brand-primary, 20%);
+@link-hover-color:      lighten(@link-color, 15%);*/
+
+@link-color:            @brand-primary-light;
+@link-hover-color:      @brand-primary-lighter;
+
+
+// Typography
+// -------------------------
+
+@font-family-sans-serif:  'Open Sans' , sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          20px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-smaller:         ceil((@font-size-base * 0.62)); 
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+@headings-font-family:    inherit;
+@headings-font-weight:    500;
+@headings-line-height:    1.1;
+@headings-color:          inherit;
+
+
+// Iconography
+// -------------------------
+
+@icon-font-path:          "../fonts/";
+@icon-font-name:          "glyphicons-halflings-regular";
+
+
+// Components
+// -------------------------
+// Based on 14px font-size and 1.428 line-height (~20px to start)
+
+@padding-base-vertical:          6px;
+@padding-base-horizontal:        12px;
+
+@padding-large-vertical:         10px;
+@padding-large-horizontal:       16px;
+
+@padding-small-vertical:         5px;
+@padding-small-horizontal:       10px;
+
+@padding-xs-vertical:            1px;
+@padding-xs-horizontal:          5px;
+
+@line-height-large:              1.33;
+@line-height-small:              1.5;
+
+@border-radius-base:             0px;
+@border-radius-large:            0px;
+@border-radius-small:            0px;
+
+/*@component-active-color:         #fff;
+@component-active-bg:            @brand-primary;*/
+@component-active-color:         @gray-darker;
+@component-active-bg:            @gray-lighter;
+
+@caret-width-base:               4px;
+@caret-width-large:              5px;
+
+// Tables
+// -------------------------
+
+@table-cell-padding:                 8px;
+@table-condensed-cell-padding:       5px;
+
+@table-bg:                           transparent; // overall background-color
+@table-bg-accent:                    #f9f9f9; // for striping
+@table-bg-hover:                     #f5f5f5;
+@table-bg-active:                    @table-bg-hover;
+
+@table-border-color:                 #ddd; // table and cell border
+
+
+// Buttons
+// -------------------------
+
+@btn-font-weight:                normal;
+
+@btn-default-color:              @gray-lighter;
+@btn-default-bg:                 @gray-dark;
+@btn-default-border:             @gray-darker;
+
+
+@btn-options-color:              @gray-light;
+@btn-options-bg:                 @gray-darker;
+@btn-options-border:             @gray-darker;
+
+
+
+@btn-primary-color:              #fff;
+@btn-primary-bg:                 @brand-primary;
+@btn-primary-border:             darken(@btn-primary-bg, 5%);
+
+@btn-success-color:              #fff;
+@btn-success-bg:                 @brand-success;
+@btn-success-border:             darken(@btn-success-bg, 5%);
+
+@btn-warning-color:              #fff;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             darken(@btn-warning-bg, 5%);
+
+@btn-danger-color:               #fff;
+@btn-danger-bg:                  @brand-danger;
+@btn-danger-border:              darken(@btn-danger-bg, 5%);
+
+@btn-info-color:                 #fff;
+@btn-info-bg:                    @brand-info;
+@btn-info-border:                darken(@btn-info-bg, 5%);
+
+@btn-link-disabled-color:        @gray-light;
+
+
+// Forms
+// -------------------------
+
+@input-bg:                       @gray;
+@input-bg-disabled:              @gray-darker;
+
+@input-color:                    #fff;
+@input-border:                   @gray-dark;
+@input-border-radius:            @border-radius-base;
+@input-border-focus:             @brand-primary;
+
+@input-color-placeholder:        @gray-light;
+
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+@legend-color:                   @gray-dark;
+@legend-border-color:            #e5e5e5;
+
+@input-group-addon-bg:           @gray-lighter;
+@input-group-addon-border-color: @input-border;
+
+
+// Dropdowns
+// -------------------------
+
+@dropdown-bg:                    @gray;
+@dropdown-border:                rgba(0,0,0,.15);
+@dropdown-fallback-border:       #ccc;
+@dropdown-divider-bg:            @gray-light;
+
+@dropdown-link-color:            @gray-lighter;
+@dropdown-link-hover-color:      lighten(@gray-lighter, 5%);
+@dropdown-link-hover-bg:         @gray-darker;
+
+@dropdown-link-active-color:     @component-active-color;
+@dropdown-link-active-bg:        @component-active-bg;
+
+@dropdown-link-disabled-color:   @gray-light;
+
+@dropdown-header-color:          @gray-light;
+
+// Note: Deprecated @dropdown-caret-color as of v3.1
+@dropdown-caret-color:           #000;
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+
+@zindex-navbar:            1000;
+@zindex-dropdown:          1000;
+@zindex-popover:           1010;
+@zindex-tooltip:           1030;
+@zindex-navbar-fixed:      1030;
+@zindex-modal-background:  1040;
+@zindex-modal:             1050;
+
+// Media queries breakpoints
+// --------------------------------------------------
+
+// Extra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+
+// Grid system
+// --------------------------------------------------
+
+// Number of columns in the grid system
+@grid-columns:              12;
+// Padding, to be divided by two and applied to the left and right of all columns
+@grid-gutter-width:         20px;
+
+// Navbar collapse
+
+// Point at which the navbar becomes uncollapsed
+@grid-float-breakpoint:     @screen-sm-min;
+// Point at which the navbar begins collapsing
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+
+// Navbar
+// -------------------------
+
+// Basics of a navbar
+@navbar-height:                    50px;
+@navbar-margin-bottom:             @line-height-computed;
+@navbar-border-radius:             @border-radius-base;
+@navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
+@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+
+@navbar-default-color:             #777;
+@navbar-default-bg:                #f8f8f8;
+@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+
+// Navbar links
+@navbar-default-link-color:                #777;
+@navbar-default-link-hover-color:          #333;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         #555;
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg:            transparent;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           #ddd;
+@navbar-default-toggle-icon-bar-bg:        #888;
+@navbar-default-toggle-border-color:       #ddd;
+
+
+// Inverted navbar
+//
+// Reset inverted navbar basics
+@navbar-inverse-color:                      @gray-light;
+@navbar-inverse-bg:                         #222;
+@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+
+// Inverted navbar links
+@navbar-inverse-link-color:                 @gray-light;
+@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-hover-bg:              transparent;
+@navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-disabled-color:        #444;
+@navbar-inverse-link-disabled-bg:           transparent;
+
+// Inverted navbar brand label
+@navbar-inverse-brand-color:                @navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color:          #fff;
+@navbar-inverse-brand-hover-bg:             transparent;
+
+// Inverted navbar toggle
+@navbar-inverse-toggle-hover-bg:            #333;
+@navbar-inverse-toggle-icon-bar-bg:         #fff;
+@navbar-inverse-toggle-border-color:        #333;
+
+.toolbar .navbar
+{
+/*border-bottom: solid 3px @brand-primary;*/
+margin-bottom: 0px;
+}
+
+
+.toolbar .navbar-nav.navbar-right:last-child
+{
+   /* margin-right:0;*/
+}
+
+.toolbar .navbar-inverse
+{
+    border:none;
+}
+
+.navbar-default.tools
+{
+  background-color:transparent;
+  border:0;  
+  /*margin:0;*/
+
+    border-bottom:2px solid @brand-primary;
+}
+
+.topactions
+{
+    padding:20px 20px;
+    
+}
+.topactions i
+{
+    color:@gray-light;
+}
+
+// Navs
+// -------------------------
+
+@nav-link-padding:                          10px 15px;
+@nav-link-hover-bg:                         @gray-lighter;
+
+@nav-disabled-link-color:                   @gray-lighter;
+@nav-disabled-link-hover-color:             @gray-light;
+
+@nav-open-link-hover-color:                 #fff;
+
+// Tabs
+@nav-tabs-border-color:                     @gray-dark;
+
+@nav-tabs-link-hover-border-color:          @gray-dark;
+
+@nav-tabs-active-link-hover-bg:             @gray-lighter;
+@nav-tabs-active-link-hover-color:          @brand-primary;
+@nav-tabs-active-link-hover-border-color:   @gray-darker;
+
+@nav-tabs-justified-link-border-color:            #ddd;
+@nav-tabs-justified-active-link-border-color:     @body-bg;
+
+// Pills
+@nav-pills-border-radius:                   @border-radius-base;
+@nav-pills-active-link-hover-bg:            @component-active-bg;
+@nav-pills-active-link-hover-color:         @component-active-color;
+
+.nav-tabs
+{
+    border-bottom:none;
+}
+
+
+
+// Pagination
+// -------------------------
+
+@pagination-color:                     @link-color;
+@pagination-bg:                        #fff;
+@pagination-border:                    #ddd;
+
+@pagination-hover-color:               @link-hover-color;
+@pagination-hover-bg:                  @gray-lighter;
+@pagination-hover-border:              #ddd;
+
+@pagination-active-color:              #fff;
+@pagination-active-bg:                 @brand-primary;
+@pagination-active-border:             @brand-primary;
+
+@pagination-disabled-color:            @gray-light;
+@pagination-disabled-bg:               #fff;
+@pagination-disabled-border:           #ddd;
+
+
+// Pager
+// -------------------------
+
+@pager-bg:                             @pagination-bg;
+@pager-border:                         @pagination-border;
+@pager-border-radius:                  15px;
+
+@pager-hover-bg:                       @pagination-hover-bg;
+
+@pager-active-bg:                      @pagination-active-bg;
+@pager-active-color:                   @pagination-active-color;
+
+@pager-disabled-color:                 @pagination-disabled-color;
+
+
+// Jumbotron
+// -------------------------
+
+@jumbotron-padding:              0px;
+@jumbotron-color:                inherit;
+@jumbotron-bg:                   @gray-darker;
+@jumbotron-heading-color:        inherit;
+@jumbotron-font-size:            ceil((@font-size-base * 1.0));
+
+
+// Form states and alerts
+// -------------------------
+
+@state-success-text:             #3c763d;
+@state-success-bg:               #dff0d8;
+@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text:                @brand-info-darker;
+@state-info-bg:                  @brand-info-lighter;
+@state-info-border:              @brand-info-light;
+
+@state-warning-text:             #8a6d3b;
+@state-warning-bg:               #fcf8e3;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+
+@state-danger-text:              #a94442;
+@state-danger-bg:                #f2dede;
+@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
+
+
+// Tooltips
+// -------------------------
+@tooltip-max-width:           200px;
+@tooltip-color:               #fff;
+@tooltip-bg:                  #000;
+@tooltip-opacity:             .9;
+
+@tooltip-arrow-width:         5px;
+@tooltip-arrow-color:         @tooltip-bg;
+
+
+// Popovers
+// -------------------------
+@popover-bg:                          #fff;
+@popover-max-width:                   1024px;
+@popover-border-color:                rgba(0,0,0,.2);
+@popover-fallback-border-color:       #ccc;
+
+@popover-title-bg:                    darken(@popover-bg, 3%);
+
+@popover-arrow-width:                 10px;
+@popover-arrow-color:                 #fff;
+
+@popover-arrow-outer-width:           (@popover-arrow-width + 1);
+@popover-arrow-outer-color:           rgba(0,0,0,.25);
+@popover-arrow-outer-fallback-color:  #999;
+
+
+// Labels
+// -------------------------
+
+@label-default-bg:            @gray-light;
+@label-primary-bg:            @brand-primary;
+@label-success-bg:            @brand-success;
+@label-info-bg:               @brand-info;
+@label-warning-bg:            @brand-warning-darker;
+@label-danger-bg:             @brand-danger;
+
+@label-color:                 #fff;
+@label-link-hover-color:      #fff;
+
+
+// Modals
+// -------------------------
+@modal-inner-padding:         20px;
+
+@modal-title-padding:         15px;
+@modal-title-line-height:     @line-height-base;
+
+@modal-content-bg:                             #fff;
+@modal-content-border-color:                   rgba(0,0,0,.2);
+@modal-content-fallback-border-color:          #999;
+
+@modal-backdrop-bg:           #000;
+@modal-backdrop-opacity:      .5;
+@modal-header-border-color:   #e5e5e5;
+@modal-footer-border-color:   @modal-header-border-color;
+
+@modal-lg:                    900px;
+@modal-sm:                    300px;
+
+
+// Alerts
+// -------------------------
+@alert-padding:               15px;
+@alert-border-radius:         @border-radius-base;
+@alert-link-font-weight:      bold;
+
+@alert-success-bg:            @state-success-bg;
+@alert-success-text:          @state-success-text;
+@alert-success-border:        @state-success-border;
+
+@alert-info-bg:               @state-info-bg;
+@alert-info-text:             @state-info-text;
+@alert-info-border:           @state-info-border;
+
+@alert-warning-bg:            @state-warning-bg;
+@alert-warning-text:          @state-warning-text;
+@alert-warning-border:        @state-warning-border;
+
+@alert-danger-bg:             @state-danger-bg;
+@alert-danger-text:           @state-danger-text;
+@alert-danger-border:         @state-danger-border;
+
+
+// Progress bars
+// -------------------------
+@progress-bg:                 #f5f5f5;
+@progress-bar-color:          #fff;
+
+@progress-bar-bg:             @brand-primary;
+@progress-bar-success-bg:     @brand-success;
+@progress-bar-warning-bg:     @brand-warning;
+@progress-bar-danger-bg:      @brand-danger;
+@progress-bar-info-bg:        @brand-info;
+
+
+// List group
+// -------------------------
+@list-group-bg:                 @gray-darker;
+@list-group-border:             @gray;
+@list-group-border-radius:      @border-radius-base;
+
+@list-group-hover-bg:           #f5f5f5;
+@list-group-active-color:       @component-active-color;
+@list-group-active-bg:          @component-active-bg;
+@list-group-active-border:      @list-group-active-bg;
+@list-group-active-text-color:  lighten(@list-group-active-bg, 40%);
+
+@list-group-link-color:         #555;
+@list-group-link-heading-color: #333;
+
+/*
+.well .panel-default {
+    background-color:@gray-lighter;
+    border-color:@gray-lighter;
+}
+.well .panel-default > .panel-heading {
+color: @gray-dark;
+    background-color:@gray-lighter;
+    border-color:@gray-lighter;
+}
+
+
+.well .list-group-item
+{
+    background-color:@gray-lighter;
+    border-color:@gray-lighter;
+    color:@gray-lighter;
+}
+*/
+
+
+.well.dark-theme
+{
+    background-color:@gray-darker;
+    border:@gray-darker;
+    color:@gray-lighter;
+}
+.well.dark-theme label
+{
+    color:@gray-lighter;
+}
+
+
+.highlight {
+    background-color:darken(@brand-primary, 0%);
+    border-color:@gray-light;
+    border-width:2px;
+    color:white;
+}
+.highlight a {
+    /*color:white;*/
+}
+
+.light-theme.panel-default > .panel-heading {
+color: @gray-darker;
+    background-color:@gray-lighter;
+    border-color:@gray;
+}
+
+.btn-options {
+  .button-variant(@btn-options-color; @btn-options-bg; @btn-options-bg);
+
+}
+
+.btn-options:hover, .btn-options:focus, .btn-options:active,  .btn-options.active, .open .dropdown-toggle .btn-options {
+background-color:@gray-darker;
+color:@brand-primary;
+border-color:@gray-darker;
+
+}
+
+.list-group-item.light-theme .btn-options {
+  .button-variant(@gray-darker; @btn-options-bg; @gray-darker);
+  background-color:@gray-lighter;
+  color:@gray-darker;
+}
+
+
+.list-group-item.highlight .btn-options {
+  .button-variant(@brand-primary; @btn-options-bg; @brand-primary);
+  background-color:@brand-primary;
+  color:@gray-lighter;
+}
+
+
+.light-theme .btn-options:hover, .light-theme .btn-options:focus, .light-theme .btn-options:active, .light-theme .btn-options.active, .open .dropdown-toggle.light-theme .btn-options {
+background-color:@gray-lighter;
+ color:@gray-lighter;
+
+}
+
+
+.light-theme , .form-control{
+    background-color:@gray-lighter;
+    border-color:@gray-dark;
+    /*border-width:2px;*/
+    color:@gray-darker;
+}
+
+ .light-theme label , .light-theme p {
+    color:@gray-darker;
+} 
+.light-theme input , .light-theme select , .light-theme textarea{
+    color:@gray-darker;
+    background-color:@gray-lighter;
+    border-color:@gray
+}
+
+.light-theme .form-control[disabled], .light-theme .form-control[readonly], .light-theme fieldset[disabled] .form-control {
+cursor: not-allowed;
+background-color: @gray-light;
+}
+
+
+.light-theme a {
+    /*color:@gray-darker;*/
+    color:@brand-primary-dark;
+}
+.light-theme a:hover {
+    /*color:@gray-darker;*/
+    /*color:darken(@brand-primary, 15%);*/
+    color:@brand-primary-darker;
+}
+.light-theme .btn-primary {
+  color:@gray-lighter;
+}
+.light-theme .btn-primary:hover, .light-theme .btn-primary:focus, .light-theme .btn-primary:active, .light-theme .btn-primary.active, .open .dropdown-toggle.light-theme .btn-primary {
+ color:@gray-lighter;
+
+}
+
+.light-theme .btn-default , .light-theme .btn-options {
+  .button-variant(@gray-light; @btn-options-bg; @gray-light);
+  background-color:@gray-lighter;
+  border-color:@gray-light;
+  color:@gray-darker;
+}
+.light-theme .btn-default:hover, .light-theme .btn-default:focus, .light-theme .btn-default:active, .light-theme .btn-default.active, .open .dropdown-toggle.light-theme .btn-default {
+ color:@gray-lighter;
+ background-color:@gray-light;
+
+}
+
+.list-group-item.light-theme .btn-options {
+  .button-variant(@gray-light; @btn-options-bg; @gray-light);
+  background-color:@gray-lighter;
+  border-color:@gray-lighter;
+  color:@gray-darker;
+}
+
+
+
+
+.light-theme .nav-tabs 
+{
+  /* border: 1px solid @gray-light;*/
+
+}
+.light-theme .nav-tabs > li > a
+{
+   /*border-color:@gray-lighter;*/
+    border-bottom: 1px solid @gray-light;
+
+}
+.light-theme .nav-tabs > li.active > a, .light-theme .nav-tabs > li.active > a:hover, .light-theme .nav-tabs > li.active > a:focus
+{
+  
+    background-color:@gray;
+  color:@gray-lighter;
+    /*border-left-color:@gray-lighter;
+    border-right-color:@gray-lighter;
+    border-top-color:@gray-lighter;*/
+    border-bottom-color:@gray-darker;
+    
+   
+}
+
+.light-theme .dropdown-menu {
+text-decoration: none;
+color: @gray-darker;
+background-color: @gray-lighter;
+}
+
+
+.light-theme .dropdown-menu > li > a {
+text-decoration: none;
+color: @gray-darker;
+background-color: @gray-lighter;
+}
+
+.light-theme .dropdown-menu > li > a:hover, .light-theme .dropdown-menu > li > a:focus {
+text-decoration: none;
+color: @gray-lighter!important;
+background-color: @brand-primary;
+}
+
+/*
+.dropdown-menu.bootstrap-timepicker-widget
+{
+    background-color:@gray-lighter!important;
+}
+
+.bootstrap-timepicker-widget table td a
+{
+    background-color:@gray-lighter!important;
+}
+.bootstrap-timepicker-widget table td a i {
+color:@gray-lighter!important;
+}*/
+
+
+
+.tab-content
+{
+    padding:15px 0;
+}
+.tab-content .form-group
+{
+    margin-right:0;
+    margin-left:0;
+}
+.panel-heading.highlight {
+color: @gray-lighter;
+    background-color:@brand-primary;
+     border-color:@gray-light;
+    
+}
+
+
+.infoblock
+{
+    background-color:transparant;font-size:65%;padding:0px;text-align:center;
+}
+
+
+/*notification*/
+
+.brand-success
+{
+    color:#31929B;
+}
+.brand-warning
+{
+    color:#FFEA4E;
+}
+.brand-info
+{
+    color:#6941AE;
+}
+
+
+/*
+@brand-success:         #31929B;
+@brand-warning:         #FFEA4E;
+@brand-danger:          #d9534f;
+@brand-info:            #6941AE;*/
+
+
+.jquery-notific8-notification.info { border-color: @brand-info-light; background-color: @brand-info-lighter; color: @brand-info-darker; }
+.jquery-notific8-notification.info .jquery-notific8-close, .jquery-notific8-notification.cbd .jquery-notific8-close-sticky { background-color: @brand-info; color: @brand-info-lighter; }
+
+.jquery-notific8-notification.success { border-color: @gray-lighter; background-color: @brand-success; color: @gray-lighter; }
+.jquery-notific8-notification.success .jquery-notific8-close, .jquery-notific8-notification.cbd .jquery-notific8-close-sticky { background-color: @brand-success; color: @gray-lighter; }
+
+.jquery-notific8-container.top {
+top: 60px!important;
+}
+
+/*modal*/
+.modal-backdrop, .modal-backdrop.fade.in
+{
+    background: @gray-darker!important;
+}
+
+.fa-stack span
+{
+    position:absolute;left:0px;top:0px;font-size:12px;text-align:center;width:100%;
+}
+.fa-stack img
+{
+    position:absolute;left:12px;top:12px;width:16px;
+}
+
+h2 .fa-stack img
+{
+    position:absolute;left:28px;top:24px;width:32px;
+}
+
+/*status*/
+.shape{	
+	border-style: solid; border-width: 0 25px 30px 0; float:left; height: 0px; width: 0px;
+	-ms-transform:rotate(360deg); /* IE 9 */
+	-o-transform: rotate(360deg);  /* Opera 10.5 */
+	-webkit-transform:rotate(360deg); /* Safari and Chrome */
+	transform:rotate(360deg);
+	position:absolute;
+right: -15px;
+top: -10px;
+
+}
+
+.shape-text{
+	color:#fff; font-size:10px; font-weight:bold; position:relative; right:-11px; top:0px; white-space: nowrap;
+
+
+}
+
+
+
+.shape.small{	
+	border-width: 0 10px 12px 0; 
+	left:-4px;
+	top:-10px;
+
+}
+.jumbotron .shape.small 
+{
+ left:0px;
+	top:-6px;   
+    
+    
+}
+
+
+.shape.info{
+	border-color: transparent @brand-info transparent transparent;
+
+}
+.shape.primary{
+	border-color: transparent @brand-primary transparent transparent;
+
+}
+.shape.success{
+	border-color: transparent @brand-success transparent transparent;
+
+}
+.shape.warning{
+	border-color: transparent @brand-warning-darker transparent transparent;
+
+}
+
+
+.panel
+{
+    background-color:@gray-darker ;
+    margin-bottom:15px;
+}
+
+
+
+
+.list-group-item.small
+{
+    padding:0px 2px;
+    /*min-height:100px;*/
+    /*background-color:transparent ;*/
+    font-size:65%;
+}
+
+.list-group-item.small .thumbnail
+{
+    /*border-top:none;
+    border-bottom:none;*/
+}
+
+
+.small .list-group-item-heading
+{
+    font-size:16px;
+}
+
+
+.list-group-item.footer
+{
+    min-height:0;padding:0;
+     background-color:@gray-dark;
+   
+
+}
+.list-group-item h4
+{
+    font-weight:500;
+    
+}
+
+.list-group-item
+                    {
+                        /*border-top:3px solid @brand-primary;*/
+                        /*border-bottom:1px solid @gray-darker;*/
+                        /*margin-bottom:10px;*/
+                        background-color:transparent ;
+                        
+                        
+                    }
+  .panel-default > .panel-heading
+  {
+ color: #eeeeee;
+ background-color:@gray-darker ;
+border: none;
+border-bottom:1px solid @gray-dark;
+  }                  
+
+/*
+.list-group-item .fa-circle
+{
+    color:@gray-dark;display:none;
+
+}*/
+
+
+.cibleimg
+{
+    width: 100%;height: 80px; margin-bottom: 0
+}
+
+.fa-circle
+{
+    color:@gray-darker;
+}
+
+.fa-inverse
+{
+    color:@gray-darker;
+}
+
+.light-theme .fa-circle
+{
+    color:@gray-lighter;
+}
+
+.list-group-item-heading
+{
+
+    font-size:@font-size-base;
+    margin-bottom:17px;
+}
+
+
+.list-group-item-text
+{
+    color:@gray-lighter;
+    font-size:@font-size-smaller;
+}
+
+.active .list-group-item-text
+{
+    /*color:@gray-darker;
+    font-size:@font-size-smaller;*/
+}
+
+
+.list-group-item-text .fa
+{
+    margin-right:5px;
+}
+
+.list-group-item-text a
+{
+    color:@brand-primary-lighter;
+}
+
+
+
+
+
+
+
+// Panels
+// -------------------------
+@panel-bg:                    #fff;
+@panel-body-padding:          15px;
+@panel-border-radius:         @border-radius-base;
+
+@panel-inner-border:          #ddd;
+@panel-footer-bg:             #f5f5f5;
+
+@panel-default-text:          @gray-lighter;
+@panel-default-border:        @gray-dark;
+@panel-default-heading-bg:    @gray-dark;
+
+@panel-primary-text:          #fff;
+@panel-primary-border:        @brand-primary;
+@panel-primary-heading-bg:    @brand-primary;
+
+@panel-success-text:          @state-success-text;
+@panel-success-border:        @state-success-border;
+@panel-success-heading-bg:    @state-success-bg;
+
+@panel-warning-text:          @state-warning-text;
+@panel-warning-border:        @state-warning-border;
+@panel-warning-heading-bg:    @state-warning-bg;
+
+@panel-danger-text:           @state-danger-text;
+@panel-danger-border:         @state-danger-border;
+@panel-danger-heading-bg:     @state-danger-bg;
+
+@panel-info-text:             @state-info-text;
+@panel-info-border:           @state-info-border;
+@panel-info-heading-bg:       @state-info-bg;
+
+
+// Thumbnails
+// -------------------------
+@thumbnail-padding:           4px;
+@thumbnail-bg:                @body-bg;
+@thumbnail-border:            @gray-dark;
+@thumbnail-border-radius:     @border-radius-base;
+
+@thumbnail-caption-color:     @text-color;
+@thumbnail-caption-padding:   9px;
+
+
+// Wells
+// -------------------------
+@well-bg:                     #f5f5f5;
+@well-border:                 darken(@well-bg, 7%);
+
+
+.well label
+{
+    color:@gray-darker;
+}
+.well h3,.well p,.well
+{
+    color:@gray-darker;
+}
+
+
+// Badges
+// -------------------------
+@badge-color:                 #fff;
+@badge-link-hover-color:      #fff;
+@badge-bg:                    @gray-light;
+
+@badge-active-color:          @link-color;
+@badge-active-bg:             #fff;
+
+@badge-font-weight:           500;
+@badge-line-height:           1;
+@badge-border-radius:         10px;
+
+
+// Breadcrumbs
+// -------------------------
+@breadcrumb-padding-vertical:   8px;
+@breadcrumb-padding-horizontal: 15px;
+@breadcrumb-bg:                 #f5f5f5;
+@breadcrumb-color:              #ccc;
+@breadcrumb-active-color:       @gray-light;
+@breadcrumb-separator:          "/";
+
+
+// Carousel
+// ------------------------
+
+@carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
+
+@carousel-control-color:                      #fff;
+@carousel-control-width:                      15%;
+@carousel-control-opacity:                    .5;
+@carousel-control-font-size:                  20px;
+
+@carousel-indicator-active-bg:                #fff;
+@carousel-indicator-border-color:             #fff;
+
+@carousel-caption-color:                      #fff;
+
+/*
+.carousel-control 
+{
+    max-width:60px;
+    height: 30px;
+    top:20px;
+}
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right
+{
+    top:5px;
+}*/
+
+/* Landscape phones and down */
+
+.carousel-control 
+{
+    width:50px;
+  
+}
+
+
+
+
+
+
+// Close
+// ------------------------
+@close-font-weight:           bold;
+@close-color:                 #000;
+@close-text-shadow:           0 1px 0 #fff;
+
+
+// Code
+// ------------------------
+@code-color:                  #c7254e;
+@code-bg:                     #f9f2f4;
+
+@kbd-color:                   #fff;
+@kbd-bg:                      #333;
+
+@pre-bg:                      #f5f5f5;
+@pre-color:                   @gray-dark;
+@pre-border-color:            #ccc;
+@pre-scrollable-max-height:   340px;
+
+// Type
+// ------------------------
+@text-muted:                  @gray-light;
+@abbr-border-color:           @gray-light;
+@headings-small-color:        @gray-light;
+@blockquote-small-color:      @gray-light;
+@blockquote-border-color:     @gray-lighter;
+@page-header-border-color:    @gray-lighter;
+
+
+.text-muted
+{
+    font-weight:400;
+    
+    
+}
+
+
+// Miscellaneous
+// -------------------------
+
+// Hr border color
+@hr-border:                   @gray-light;
+
+// Horizontal forms & lists
+@component-offset-horizontal: 180px;
+
+.light-theme hr
+{
+    border-color:@gray-light;
+}
+
+hr
+{
+margin-top: 15px;
+margin-bottom: 15px;
+}
+
+// Container sizes
+// --------------------------------------------------
+
+// Small screen / tablet
+@container-tablet:             ((720px + @grid-gutter-width));
+@container-sm:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            ((940px + @grid-gutter-width));
+@container-md:                 @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:      ((1140px + @grid-gutter-width));
+@container-lg:                 @container-large-desktop;
+
+
+body
+{
+    padding-top: 50px;
+
+}
+
+.navbar  h1
+{
+    font-size: 24px;
+    margin: 0.67em 0;
+}
+
+
+
+
+.jumbotron 
+{
+    /*background-color:@gray-dark;*/
+    border-bottom:solid 3px @brand-primary;
+    margin-bottom:20px;
+   margin-top:0px;
+    padding-top:5px;
+}
+.jumbotron.light-theme
+{
+    background-color:@gray-lighter!important;
+}
+.jumbotron.light-theme , .jumbotron.light-theme  h2 , .jumbotron.light-theme  p
+{
+    color:@gray-darker;
+}
+
+.jumbotron h2
+{
+    margin-top:10px;
+}
+.jumbotron p
+{
+    margin-bottom:10px;
+}
+
+
+.jumbotron .small 
+{
+    font-size:@font-size-small;
+}
+
+
+.starter-template
+{
+    padding: 30px 0px;
+}
+
+
+a:hover {
+text-decoration: none;
+}
+
+.brandlogo
+{
+    background-color:@brand-primary;
+    width:42px;height:42px;padding:5px 8px;
+}
+
+.navbar-nav {
+padding: 10px 0px;
+}
+
+
+
+
+
+.nav > li > a:hover, .nav > li > a:focus {
+text-decoration: none;
+background-color: @gray;
+}
+
+/*
+  background-color: @dropdown-bg;*/
+.twitter-typeahead{
+width:100%;
+}
+
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+  margin-bottom: 0;
+  background-color:@gray!important;
+}
+
+.light-theme .twitter-typeahead .tt-query,
+.light-theme .twitter-typeahead .tt-hint {
+  margin-bottom: 0;
+  background-color:@gray-lighter!important;
+}
+
+
+.tt-dropdown-menu {
+  min-width: 160px;
+  margin-top: 2px;
+  padding: 5px 0;
+  /*background-color: #fff;*/
+ /* border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);*/
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-border-radius: @border-radius-base;
+     -moz-border-radius: @border-radius-base;
+          border-radius: @border-radius-base;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+  width:100%;        
+}
+
+
+.light-theme .tt-dropdown-menu 
+{
+    background-color:@gray-lighter!important;
+}
+
+
+
+.tt-suggestion {
+  display: block;
+  padding: 3px 20px;
+  /*color: @gray-darker;*/
+}
+
+.tt-suggestion.tt-is-under-cursor {
+ /* color: #fff;*/
+  background-color: @brand-primary;
+  background-image: -moz-linear-gradient(top, @brand-primary,darken(@brand-primary, 15%));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@brand-primary), to(darken(@brand-primary, 15%)));
+  background-image: -webkit-linear-gradient(top, @brand-primary, darken(@brand-primary, 15%));
+  background-image: -o-linear-gradient(top, @brand-primary, darken(@brand-primary, 15%));
+  background-image: linear-gradient(to bottom, @brand-primary, darken(@brand-primary, 15%));
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@brand-primary', endColorstr='darken(@brand-primary, 15%)', GradientType=0)
+}
+
+.tt-suggestion.tt-is-under-cursor a {
+  /*color: #fff;*/
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+
+.panel-default
+{
+    /*height:350px;
+    overflow:hidden;
+    background-color:@gray-darker;*/
+    /*border-color:@gray-darker;*/
+}
+
+.panel-default .big
+{
+    /*height:auto;
+    overflow:hidden;
+    background-color:@gray-darker;*/
+}
+
+
+
+
+/* .widget .panel-body { padding:0px; }
+
+
+
+
+.widget li.list-group-item:hover { background-color: @gray-darker; }*/
+
+.panel{border: 0;border-top: @gray-dark;}
+
+ .panel-title { display:inline }
+ .list-group { margin-bottom: 0; }
+ .label-info , .label-warning { float: right; }
+ .comment-text { font-size: 14px;line-height:24px }
+ .mic-info { color: @gray-light;font-size: 11px; }
+
+
+.urgent
+{
+    color: Red; padding: 0 10px;font-weight:600;
+}
+
+.check
+{
+    position: absolute;right: -10px; top: 2px;
+}
+
+.toolbar
+{
+    /*background-color:@gray-dark;*/
+}
+
+.toolbar .btn-group.pull-right
+{
+    padding:5px ;
+}
+
+
+.toolbar .navbar-nav
+{
+    padding:0;
+}
+
+.toolbar .navbar-inverse .navbar-collapse, .toolbar .navbar-inverse .navbar-form
+{
+    border:none;
+}
+
+.toolbar .navbar-toggle {
+position: relative;
+float: right;
+margin-right: 10px;
+padding: 0px 10px;
+margin-top: 8px;
+margin-bottom: 8px;
+background-color: transparent;
+background-image: none;
+border: none;
+border-radius: 0px;
+}
+
+.toolbar .btn-group a
+{
+    background-color:transparent;
+    border-color:transparent;
+}
+
+.toolbar .btn-group a:hover
+{
+    background-color:@gray-dark;
+    
+}
+ 
+ body
+{
+
+    background: url(../img/diag_bg.png), @gray-darker;    
+}
+
+
+
+/* Landscape phones and down */
+@media (max-width: 767px)  
+{
+  .jumbotron h2 {
+font-size:36px;
+line-height:40px;
+} 
+.carousel-control 
+{
+    width:35px;
+  
+}
+   
+}
+
+
+
